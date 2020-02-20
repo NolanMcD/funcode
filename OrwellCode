@@ -1,0 +1,14 @@
+Title = input("Enter the year you wrote your novel: ")
+ArrL = []
+for n in Title:
+    ArrL.append(n)
+
+lastDig = ArrL[-1]
+ArrL[-1] = ArrL[-2]
+ArrL[-2] = lastDig
+
+newTitle = ""
+for n in ArrL:
+    newTitle = newTitle + n
+    
+print("The title of your dystopian novel is", newTitle)
