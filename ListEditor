@@ -1,0 +1,37 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Mar 22 19:32:29 2020
+
+@author: boltj
+"""
+
+def dictionaryList(fileName):
+    listOfWords = []
+    f = open(fileName, "r")
+    for x in f:
+        listOfWords.append(x)
+    return listOfWords
+
+def listFromInput(userInput):
+    listOfLetters = []
+    for x in userInput:
+        listOfLetters.append(x)
+    return listOfLetters
+
+def Main():
+    userInput = input("Enter your string: ")
+    Letterlist = listFromInput(userInput)
+    Wordlist = dictionaryList("lessWords.txt")
+    finalList = Wordlist.copy()
+    emptyList = []
+    for word in finalList:
+        for char in word:
+            if(char in Letterlist):
+                emptyList.append(word)
+        
+    
+    
+            
+    
+    
+Main()
