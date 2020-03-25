@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Mar 24 18:08:53 2020
+
+@author: boltj
+
+hunger scale [1 2 3 4 5 6 7 8 9 10]
+            full    hungry    starving
+"""
+
+def portionCalc(Mom,Dad,Jake,Nolan,Sean):
+    hungerValue = (Mom + Dad + Jake + Nolan + Sean)/5
+    print(hungerValue)
+    if(hungerValue < 3):
+        print("Don't start dinner nobody is hungry")
+    elif(hungerValue >= 3 and hungerValue < 5):
+        print("Cook a smaller sized dinner")
+    elif(hungerValue >= 5 and hungerValue < 7):
+        print("Cook a normal sized dinner")
+    else:
+        print("Cook a bigger dinner")
+
+portionCalc(5,5,8,4,6)
